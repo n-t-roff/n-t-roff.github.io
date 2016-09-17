@@ -1,0 +1,35 @@
+<html lang="de">
+ <head>
+  <meta charset="utf-8">
+  <title>vddiff&mdash;Text Terminal Directory Diff Tool</title>
+ </head>
+ <body>
+  <h1>vddiff&mdash;Text Terminal Directory Diff Tool</h1>
+  <p>vddiff is a simple text terminal directory diff tool using
+  vim for the actual diff operation.
+  A file browser with lynx like navigation
+  displays the names found in the directories
+  given on the command line:</p>
+  <img src="vddiff-1.png" alt="vddiff file browser"
+   width="60%" height="auto">
+  <p>Opening a file with differences startes vim in diff mode:</p>
+  <img src="vddiff-2.png" alt="vim file diff view"
+   width="60%" height="auto">
+  <p>vddiff can be downloaded at
+  <a href="https://github.com/n-t-roff/vddiff">https://github.com/n-t-roff/vddiff</a>.
+  Before it can be build,
+  <a href="https://github.com/n-t-roff/libavlbst">libavlbst</a>
+  needs to be installed.
+  The software is then compiled and installed with:</p>
+  <pre>
+  <code>
+  $ ./configure
+  $ make
+  $ su
+  # make install
+  # exit
+  $ make distclean
+  </code>
+  </pre>
+ </body>
+</html>
