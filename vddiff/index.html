@@ -6,31 +6,27 @@
  <body>
   <h1>vddiff&mdash;Text Terminal Directory Diff Tool</h1>
   <p>vddiff is a simple text terminal directory diff tool using
-  vim for the actual diff operation.
-  A file browser with lynx like navigation
+  <code>vim -dR</code> for the actual diff operation
+  (other diff tools can be configured).
+  A file browser with lynx and vi like navigation
   displays the names found in the directories
   given on the command line:</p>
   <img src="vddiff-1.png" alt="vddiff file browser">
-  <p>Opening a file with differences startes vim in diff mode:</p>
+  <p>Opening a file with differences startes vim in diff mode
+  (if vim is not installed, &ldquo;<code>diff</code> <i>file1</i>
+  <i>file2</i> <code>| less</code>&rdquo; is used instead):</p>
   <img src="vddiff-2.png" alt="vim file diff view">
+  <p>Merging of file contents is done with vim or the selected diff
+  tool.
+  If the available diff tools don't support merging, files can be
+  opened separately in the file browser to edit them with e.g. vi.
+  File system level merging (copying, renaming or deleting files or
+  directories) can be done with the tool itself.</p>
   <p>See the
   <a href="http://n-t-roff.github.io/vddiff/vddiff.1.html">man page</a>
-  for a short documentation.
-  vddiff can be downloaded at
-  <a href="https://github.com/n-t-roff/vddiff">https://github.com/n-t-roff/vddiff</a>.
-  It is recommended (but not required) to install the speed optimized AVL library
-  <a href="https://github.com/n-t-roff/libavlbst">libavlbst</a>
-  <i>before</i>
-  the software is build and installed with:</p>
-  <pre>
-  <code>
-  $ ./configure
-  $ make
-  $ su
-  # make install
-  # exit
-  $ make distclean
-  </code>
-  </pre>
+  for the complete documentation.
+  Releases and download and installation instructions are found on the
+  <a href="https://github.com/n-t-roff/vddiff">project source
+  code page</a>.</p>
  </body>
 </html>
