@@ -1,12 +1,13 @@
-<html lang="de">
+<html lang="en">
  <head>
   <meta charset="utf-8">
   <title>vddiff&mdash;Text Terminal Directory Diff Tool</title>
  </head>
  <body>
   <h1>vddiff&mdash;Text Terminal Directory Diff Tool</h1>
-  <p>vddiff is a simple text terminal directory diff tool using
-  <code>vim -dR</code> for the actual diff operation
+  <p>vddiff is a simple text terminal directory diff tool.
+  It compares two directories and uses
+  <code>vim -dR</code> for the actual file diff operation
   (other diff tools can be configured).
   A file browser with lynx and vi like navigation
   displays the names found in the directories
@@ -20,10 +21,23 @@
   tool.
   If the available diff tools don't support merging, files can be
   opened separately in the file browser to edit them with e.g. vi.
-  File system level merging (copying, renaming or deleting files or
-  directories) can be done with the tool itself.</p>
-  <p>See the
-  <a href="http://n-t-roff.github.io/vddiff/vddiff.1.html">man page</a>
+  File system level merging (copying, renaming and deleting files or
+  directories) is done with the tool itself.</p>
+  <p>Features:
+  <ul>
+   <li>Transparent comparison of compressed files and directories.</li>
+   <li>By use of marks files and directories can be compared
+    which had been renamed or compressed in one of the file trees,
+    and of of files which are in different directory levels.</li>
+   <li>In contrast to <code>diff</code>(1) symbolic links are not
+    followed by default.</li>
+   <li>All used build tools and library functions are POSIX.
+    The tool had been tested on NetBSD, OpenBSD, FreeBSD, Linux,
+    and Solaris.</li>
+  </ul></p>
+  <p>See the man page
+  (<a href="http://n-t-roff.github.io/vddiff/vddiff.1.pdf">PDF</a>,
+  <a href="http://n-t-roff.github.io/vddiff/vddiff.1.html">HTML</a>)
   for the complete documentation.
   Releases and download and installation instructions are found on the
   <a href="https://github.com/n-t-roff/vddiff">project source
