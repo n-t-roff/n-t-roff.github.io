@@ -12,7 +12,7 @@
   A file browser with lynx and vi like navigation
   displays the names found in the directories
   given on the command line:</p>
-  <img src="vddiff-1.png" alt="vddiff file browser">
+  <img src="vddiff-1.png" alt="vddiff file diff mode">
   <p>Opening a file with differences startes vim in diff mode
   (if vim is not installed, &ldquo;<code>diff</code> <i>file1</i>
   <i>file2</i> <code>| less</code>&rdquo; is used instead):</p>
@@ -23,6 +23,15 @@
   opened separately in the file browser to edit them with e.g. vi.
   File system level merging (copying, renaming and deleting files or
   directories) is done with the tool itself.</p>
+  <p>If vddiff is started with option <code>-y</code>
+  (or key &ldquo;<code>CTRL-w</code>&rdquo; is pressed),
+  a two-column layout is used:</p>
+  <img src="vddiff-3.png" alt="two-column vddiff file diff mode">
+  <p>Starting vddiff with option <code>-B</code> or pressing key
+  &lsquo;<code>#</code>&rsquo; opens a file manager mode.
+  This mode allows comparison of arbitrary files or directories
+  by use of marks:</p>
+  <img src="vddiff-4.png" alt="two-column vddiff file browser mode">
   <p>Features:
   <ul>
    <li>Transparent comparison of compressed files and directories.</li>
